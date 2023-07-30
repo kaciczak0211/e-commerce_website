@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Streetwear Shop</title>
+    <script src="min.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="showModal()">
+    <div class="delivery">
+        <h1 class="header-text">Darmowa Dostawa Od 299PLN</h1>
+    </div>
+    <header>
+        <nav>
+            <div class="logo-desktop">Heaven.
+                <div class="colored">Snkrs</div>
+            </div>
+            <div class="logo-mobile">H.
+                <div class="colored">S</div>
+            </div>
+            <div class="dropdown">
+            <button class="link">Home</button>
+                <div class="dropdown-links">
+                </div>
+            </div>
+            
+            <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Sneakers&darr;</button>
+                <div class="dropdown-links">
+                    <a href="#">Jordan</a><br>
+                    <a href="#">Adidas</a><br>
+                    <a href="#">New Balance</a><br>
+                    <a href="#">Yeezy</a><br>
+                </div>
+                </div>
+             <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Ubrania&darr;</button>
+                <div class="dropdown-links">
+                    <a href="#">Bluzy</a><br>
+                    <a href="#">Koszulki</a><br>
+                    <a href="#">Swetry</a><br>
+                    <a href="#">Spodnie</a><br>
+                    <a href="#">Kurtki</a><br>
+                    <a href="#">Akcesoria</a><br>
+            </div>
+            </div>
+            <div class="dropdown" data-dropdown>
+                <button class="link" data-dropdown-button>Marki&darr;</button>
+                    <div class="dropdown-links">
+                        <a href="#">Nike</a><br>
+                        <a href="#">Adidas</a><br>
+                        <a href="#">Yeezy</a><br>
+                        <a href="#">2005</a><br>
+                        <a href="#">Palace</a><br>
+                        <a href="#">Supreme</a><br>
+                        <a href="#">Inne</a><br>
+
+                    </div>
+            </div>
+            <div class="dropdown">
+                <button class="link" id="red">Sale</button>
+                    <div class="dropdown-links">
+                    </div>
+            </div>
+            <div class="dropdown">
+                <button class="link">Zamówienia Personalne</button>
+                    <div class="dropdown-links">
+                    </div>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i id="hum-btn" class="fa fa-bars"></i>
+            </div>
+        </nav>
+        <div class="hamburger">
+
+            <div id="mobile_menu">
+                <div class="dropdown-mobile">
+                    <button class="link-mobile">Home</button>
+                        <div class="dropdown-links-mobile">
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown-mobile" data-dropdown>
+                    <button class="link-mobile" data-dropdown-button>Sneakers&darr;</button>
+                        <div class="dropdown-links-mobile">
+                            <a href="#">Jordan</a><br>
+                            <a href="#">Adidas</a><br>
+                            <a href="#">New Balance</a><br>
+                            <a href="#">Yeezy</a><br>
+                        </div>
+                        </div>
+                     <div class="dropdown-mobile" data-dropdown>
+                    <button class="link-mobile" data-dropdown-button>Ubrania&darr;</button>
+                        <div class="dropdown-links-mobile">
+                            <a href="#">Bluzy</a><br>
+                            <a href="#">Koszulki</a><br>
+                            <a href="#">Swetry</a><br>
+                            <a href="#">Spodnie</a><br>
+                            <a href="#">Kurtki</a><br>
+                            <a href="#">Akcesoria</a><br>
+                    </div>
+                    </div>
+                    <div class="dropdown-mobile" data-dropdown>
+                        <button class="link-mobile" data-dropdown-button>Marki&darr;</button>
+                            <div class="dropdown-links-mobile">
+                                <a href="#">Nike</a><br>
+                                <a href="#">Adidas</a><br>
+                                <a href="#">Yeezy</a><br>
+                                <a href="#">2005</a><br>
+                                <a href="#">Palace</a><br>
+                                <a href="#">Supreme</a><br>
+                                <a href="#">Inne</a><br>
+        
+                            </div>
+                    </div>
+                    <div class="dropdown-mobile">
+                        <button class="link-mobile" id="red">Sale</button>
+                            <div class="dropdown-links-mobile">
+                            </div>
+                    </div>
+                    <div class="dropdown-mobile">
+                        <button class="link-mobile">Zamówienia Personalne</button>
+                            <div class="dropdown-links-mobile">
+                            </div>
+                    </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="slider">
+        <img class="img" id="img-1" src="4.webp" alt="Image 1"/>
+        <img class="img" id="img-2" src="2.webp" alt="Image 2"/>
+        <img class="img" id="img-3" src="3.webp" alt="Image 3"/>
+        <div class="navigation-button">
+            <span class="dot active" onclick="changeSlide(0)"></span>
+            <span class="dot" onclick="changeSlide(1)"></span>
+            <span class="dot" onclick="changeSlide(2)"></span>
+        </div>
+    </div><br>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="text-img">
+                <img src="newsletter picture.jpg" alt="jordan">
+                <h3>
+                    Zapisz się do newslettera już teraz i zgarnij 5% rabatu na pierwsze zakupy!*
+                    <div class="rest-content">
+                        <h4>
+                            *rabat dotyczy produktów nieprzecenionych
+                        </h4>
+        
+                        <button>Zapisz się</button>
+                    </div>
+                </h3>
+
+            </div>
+            
+            
+        </div>
+    </div>
+<div class="products">
+    <div class="product">
+        <div class="img">
+            <img src="product/Dropsy-Store-format-6.png" alt="Air Jordan 4">
+        </div>
+        <div class="title">
+            Air Jordan 4 Retro<br> Seafoam (W)
+        </div>
+        <div class="price">
+            1699 PLN – 1749 PLN
+        </div>     
+    </div>
+
+    <div class="product">
+        <div class="img">
+            <img src="product/img01-1.jpg.webp" alt="Air Jordan 4">
+        </div>
+        <div class="title">
+            Nike SB Dunk<br> Low Black Gum
+        </div>
+        <div class="price">
+            799 PLN - 1049 PLN 
+        </div>     
+    </div>
+    <div class="product">
+        <div class="img">
+            <img src="product/img01.jpeg" alt="Air Jordan 4">
+        </div>
+        <div class="title">
+            Nike SB Dunk<br> Low Black Gum
+        </div>
+        <div class="price">
+            999 PLN - 1249 PLN 
+        </div>     
+    </div>
+    <div class="product">
+        <div class="img">
+            <img src="product/drake-nocta.jpeg.webp" alt="Air Jordan 4">
+        </div>
+        <div class="title">
+            Nike Air Force 1 Low<br> Drake NOCTA Certified Lover Boy
+        </div>
+        <div class="price">
+            1399 PLN – 1499 PLN
+        </div>     
+    </div>
+    <div class="product">
+        <div class="img">
+            <img src="product/Air-Jordan-4-Retro-White-Midnight-Navy.jpg.webp" alt="Air Jordan 4">
+        </div>
+        <div class="title">
+            Air Jordan 4 Retro<br> Midnight Navy
+        </div>
+        <div class="price">
+            1699 PLN – 1999 PLN
+        </div>     
+    </div>
+    <div class="product">
+        <div class="img">
+            <img src="product/Dropsy-Store-format-2023-06-14T175957.085.png.webp" alt="Air Jordan 4">
+        </div>
+        <div class="title">
+            Air Jordan 1 Retro High OG<br> Yellow Toe
+        </div>
+        <div class="price">
+            1149 PLN – 1199 PLN
+        </div>     
+    </div>
+    <div class="product">
+        <div class="img">
+            <img src="product/Dropsy-Store-format-100.png.webp" alt="Air Jordan 4">
+        </div>
+        <div class="title">
+            Adidas Yeezy Boost 350<br> V2 Onyx
+        </div>
+        <div class="price">
+            1449 PLN – 1549 PLN
+        </div>     
+    </div>
+    <div class="product">
+        <div class="img">
+            <img src="product/slide.webp" alt="Air Jordan 4">
+        </div>
+        <div class="title">
+            Adidas Yeezy Slide<br> Onyx
+        </div>
+        <div class="price">
+            799 PLN – 949 PLN
+        </div>     
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
